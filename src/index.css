@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+#root {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+/* body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+} */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -9,6 +23,34 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card {
+  width: 800px;
+  height: 800px;
+}
+
+.input {
+  @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg block w-full p-2.5;
+}
+
+.label {
+  @apply block mb-2 text-sm font-medium text-gray-900
+}
+
+.list-ul {
+  @apply space-y-4 text-gray-500 list-disc list-inside;
+}
+
+.list-li {
+  @apply pl-5 mt-2 space-y-1 list-decimal list-inside;
 }
 
 code {
