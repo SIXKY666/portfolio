@@ -1,19 +1,29 @@
 import React from "react";
+import {Link} from "react-router-dom";
+import "../index.css"
 export default function NavBar() {
     return (
         <>
-            <nav className="bg-white drop-shadow border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
-                <div className="container flex flex-wrap items-center justify-end mx-auto">
-                    <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-                        <ul className="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <nav className="bg-stone-100 drop-shadow border-gray-200 px-2 sm:px-4 py-2.5 rounded">
+                <div className="flex flex-wrap justify-center items-center mx-0 ">
+                    <div className="flex flex-row w-full mx-0 justify-between" id="navbar-default">
+                        <ul className="flex justify-start p-4 border border-stone-100 rounded-lg bg-stone-100">
                             <li>
-                                <a href="/" className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Home</a>
+                                <Link to="/" className="block text-2xl font-bold py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-400">Natdanai</Link>
+                            </li>
+                        </ul>
+                        <ul className="flex justify-end p-4 mr-9 border border-stone-100 rounded-lg bg-stone-100">
+                            <li>
+                                <Link to="/" className="block text-lg font-semibold py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-400">Home</Link>
                             </li>
                             <li>
-                                <a href="/login" className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Login</a>
+                                <Link to="/projects" className="block text-lg font-semibold py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-400">Projects</Link>
                             </li>
                             <li>
-                                <a href="/list" className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">List</a>
+                                <Link to="/about" className="block text-lg font-semibold py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-400">About</Link>
+                            </li>
+                            <li>
+                                <Link to="/contact" className="block text-lg font-semibold py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-400">Contact</Link>
                             </li>
                         </ul>
                     </div>
